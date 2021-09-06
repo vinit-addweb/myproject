@@ -2,6 +2,7 @@
  
  class sum
  {
+     // splat operator
      function add(...$number)
      {
          $num = 0;
