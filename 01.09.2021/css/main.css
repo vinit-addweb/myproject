@@ -1,0 +1,28 @@
+.frm {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 20px;
+}
+
+input {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 5px;
+}
+
+label {
+  font-size: larger;
+}
+
+h1 {
+  color: blue;
+}
+
+button {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  width: 15%;
+  margin-left: 50px;
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+</head>
+
+<body>
+  <h1>Welcome to my page </h1>
+  <p> Your name is: <Span id="yourname"> </Span>
+  </p>
+  <br>
+  <p>Your Email is: <span id="emailid"></span>
+  </p>
+  <br>
+  <p>
+    click here to see your location : <button id="geo" onclick="geolocation()">click me</button>
+  </p>
+  <p id="location"></p>
+  <div>
+    <video width="320" height="240" controls>
+      <source src="" type="video/mp4" id="myvideo">
+      <source type="video/ogg" id="myvideo">
+      Your browser does not support the video tag.
+    </video>
+    <video>
+
+    </video>
+    <audio controls>
+      <source id="audio" src="">
+    </audio>
+  </div>
+
+  <script>
+    document.getElementById("yourname").innerHTML = localStorage.getItem("nameValue");
+    document.getElementById("emailid").innerHTML = localStorage.getItem("emailValue");
+    //ar y = document.getElementById("myvideo").innerHTML = localStorage.getItem("fileis")
+    //console.log(y)
+    function geolocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition)
+      }
+      else {
+        alert("your browser is not supporting gps")
+      }
+
+    }
+
+    function showPosition(position) {
+      var x = "Your current location is (" + "Latitude: " + position.coords.latitude + ", " + "Longitude: " + position.coords.longitude + ")";
+      document.getElementById("location").innerHTML = x;
+    }
+    function getExtension(file) {
+      var parts = file.split(',');
+      return parts[parts.length - 1];
+    }
+    function isVideo(file) {
+      var ext = getExtension(file)
+      switch (ext.toLowerCase()) {
+        case 'webm':
+        case 'ogg':
+        case 'mp4':
+          //etc
+          return true;
+      }
+      return false;
+    }
+
+    function isAudio(file) {
+      var ext = getExtension(file);
+      switch (ext.toLowerCase()) {
+        case 'wav':
+        case 'mp3':
+        case 'ogg':
+          return true
+      }
+      return false
+    }
+    if (isAudio) {
+      document.getElementById("audio").setAttribute("src", "/home/vint/Downloads/" + file);
+    }
+    else if (isVideo) {
+      document.getElementById("myvideo").setAttribute("src", "/home/vint/Downloads/" + file);
+    }
+    else {
+      document.write("unsupported file");
+    }
+  </script>
+</body>
+
+</html>

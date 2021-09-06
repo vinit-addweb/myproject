@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+
+</head>
+
+<body>
+    <h1>Welcome To This Page</h1>
+
+    <form action="newpage.html">
+        <div class="frm">
+            <label for="Name">Name: </label>
+            <input name="name" type="text" id="fname" />
+        </div>
+        <div class="frm">
+            <label for="Name">Email:</label>
+            <input type="email" type="email" id="emaill" />
+        </div>
+        <div class="frm">
+            <label for="file" id="thefile">File: </label>
+            <input type="file" id="file" onChange="fileName(this)"
+                accept="audio/mpeg, audio/mp3, audio/ogg, video/mp4, video/ogg, video/webm">
+        </div>
+        <div class="frm">
+            <button type="submit" value="click" onclick="passvalue();">Submit</button>
+        </div>
+
+    </form>
+    <script>
+        function passvalue() {
+            var firstname = document.getElementById("fname").value;
+            localStorage.setItem("nameValue", firstname);
+            var email = document.getElementById("emaill").value;
+            localStorage.setItem("emailValue", email);
+
+            var file = myFile.files[0]; 
+            var filename = file.name;
+            // alert(filename)
+            localStorage.setItem("txtfile", filename);
+
+            return false;
+
+        }
+    </script>
+
+</body>
+
+</html>
