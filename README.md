@@ -5,6 +5,7 @@
 
 03.09.2021 - Task on PHP Oops Concept (Class,Object,multilevel inheritance,overriding,constructor) 
 
+06.09.2021 - task on PHP Oops Concept (Self vs $this, Default parameter, and magic functions)
 
 
 
