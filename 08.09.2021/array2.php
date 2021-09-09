@@ -4,6 +4,7 @@
 $a = array(1,23,4,8,68,6);
 function u(&$arr)
 {
+
     $arr[0] = 0;
     echo "updated array";
     print_r ($arr);
