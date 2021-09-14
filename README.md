@@ -3,7 +3,7 @@
 
 27-08-2021 - Docker and lando task
 
-28-80-2021 - Git task
+30-80-2021 - Git task
 
 31-08-2021 - Sass task
 
