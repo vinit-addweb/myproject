@@ -21,6 +21,6 @@
 
 09.09.2021 - Task on PHP Static keyword (Static Method and Static properties)
 
-
+13-09-2021 - Git exercise
 
 
