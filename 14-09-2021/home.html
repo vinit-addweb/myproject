@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <script>
+        var down = document.getElementById("myfrm");
+
+        // break line element
+        var br = document.createElement("br");
+        function myfrm() {
+            
+
+            // heading
+            var head = document.createElement("h2")
+            head.innerHTML = "Fill the form";
+            
+
+            // form 
+            form = document.createElement("form");
+            //form.setAttribute("method", "post");
+            form.setAttribute("action", "second.html");
+            
+
+
+            //  Name input
+            var name = document.createElement("input");
+            name.setAttribute("type", "text");
+            name.setAttribute("id", "name");
+            name.setAttribute("placeholder", "Enter Name");
+
+            //  password input
+            var password = document.createElement("input");
+            password.setAttribute("type", "password");
+            password.setAttribute("id", "password");
+            password.setAttribute("placeholder", "Password");
+           // password.setAttribute("pattern"="(?=.*[a-z])(?=.*[A-Z]).{8,}");
+
+            // mobile input
+            var mob = document.createElement("input");
+            mob.setAttribute("type", "Number");
+            mob.setAttribute("id", "mob");
+            mob.setAttribute("placeholder", "Enter number");
+
+            //  emailID input
+            var EID = document.createElement("input");
+            EID.setAttribute("type", "text");
+            EID.setAttribute("id", "email");
+            EID.setAttribute("placeholder", "E-Mail ID");
+
+            // address input
+            var add = document.createElement("textarea");
+            add.setAttribute("id", "post");
+            add.setAttribute("maxlength", 3000);
+            add.setAttribute("row", 50 );
+            add.setAttribute("col", 50);
+            add.setAttribute("placeholder", "Enter your address");
+
+            // state input
+
+            var labell = document.createElement('label');
+            labell.setAttribute("for", "select");
+            labell.innerHTML = "State :- ";
+
+            var select = document.createElement("select");
+            select.setAttribute("onchange", "city()");
+            select.setAttribute("id", "state");
+
+
+            var optionx = document.createElement("option");
+            optionx.setAttribute("name", "firstOption");
+            var optiony = document.createElement("option");
+            optiony.setAttribute("name", "firstOption");
+            var optionz = document.createElement("option");
+            optionz.setAttribute("name", "secondOption");
+            optionx.innerHTML = "Select";
+            optiony.innerHTML = "Rajasthan";
+            optionz.innerHTML = "Hariyana";
+
+            // city input
+
+            var label = document.createElement('label');
+            label.setAttribute("for", "city");
+            label.innerHTML = "City : ";
+
+            var select1 = document.createElement("select");
+            select1.setAttribute("id", "citi")
+            var optiona = document.createElement("option");
+            optiona.setAttribute("id", "optiona");
+            var optionb = document.createElement("option");
+            optionb.setAttribute("id", "optionb");
+            var optionc = document.createElement("option");
+            optionc.setAttribute("id", "optionc");
+            var optiond = document.createElement("option");
+            optiond.setAttribute("id", "optiond");
+
+
+            // submit button
+            var s = document.createElement("input");
+            s.setAttribute("type", "submit");
+            s.setAttribute("value", "Submit");
+            s.setAttribute("onclick","set()")
+             //Append Head
+
+             form.appendChild(head);
+
+            // Append name
+            form.appendChild(name);
+            form.appendChild(br.cloneNode());
+
+
+            // Append Password 
+            form.appendChild(password);
+            form.appendChild(br.cloneNode());
+
+
+            // Append the mob
+            form.appendChild(mob);
+            form.appendChild(br.cloneNode());
+
+            // Append the emailID 
+            form.appendChild(EID);
+            form.appendChild(br.cloneNode());
+
+
+            // Append the address
+
+            form.appendChild(add);
+            form.appendChild(br.cloneNode());
+
+            // Append  the state
+            form.appendChild(labell);
+
+            select.appendChild(optionx);
+            select.appendChild(optiony);
+            select.appendChild(optionz);
+            form.appendChild(select);
+            form.appendChild(br.cloneNode());
+
+            // Append city
+            form.appendChild(label);
+            select1.appendChild(optiona)
+            select1.appendChild(optionb);
+            select1.appendChild(optionc);
+            select1.appendChild(optiond);
+            form.appendChild(select1);
+            form.appendChild(br.cloneNode());
+
+            form.appendChild(s);
+
+            document.getElementsByTagName("body")[0]
+                .appendChild(form);
+        }
+
+        function city() {
+
+            var x = document.getElementsByTagName("select")[0].value;
+            var optionx = document.getElementById("optiona");
+            var optiony = document.getElementById("optionb");
+            var optiony = document.getElementById("optionc");
+            var optiony = document.getElementById("optiond");
+
+
+            if (x == 'Rajasthan') {
+                optiona.innerHTML = "Select";
+                optionb.innerHTML = "Sikar";
+                optionc.innerHTML = "Jaipur";
+                optiond.innerHTML = "Udaipur";
+            } else if (x == 'Hariyana') {
+                optiona.innerHTML = "Select";
+                optionb.innerHTML = "Rohtak";
+                optionc.innerHTML = "Bhiwani";
+                optiond.innerHTML = "Hisar"
+            }
+
+        }
+
+        function set(){
+            var name = document.getElementById("name").value;
+            var password = document.getElementById("password").value;
+            var mob = document.getElementById("mob").value;
+            var email = document.getElementById("email").value;
+            var state = document.getElementById("state")[0].value;
+            var city = document.getElementById("city")[0].value;
+
+
+            localStorage.setItem("uname",name);
+            localStorage.setItem("upassword",password);
+            localStorage.setItem("umob",mob);
+            localStorage.setItem("uemail",email);
+            localStorage.setItem("ustate",state);
+            localStorage.setItem("ucity",city);
+
+
+        }
+        
+</script>
+</head>
+
+<body onload="myfrm()">
+    <div id="myfrm"></div>
+</body>
+
+</html>
