@@ -21,7 +21,7 @@
 
             // form 
             form = document.createElement("form");
-            //form.setAttribute("method", "post");
+            // form.setAttribute("method", "post");
             form.setAttribute("action", "second.html");
             
 
@@ -67,15 +67,18 @@
 
             var select = document.createElement("select");
             select.setAttribute("onchange", "city()");
-            select.setAttribute("id", "state");
+            select.setAttribute("id", "statee");
 
 
             var optionx = document.createElement("option");
             optionx.setAttribute("name", "firstOption");
+            optionx.setAttribute("id", "firstOption");
             var optiony = document.createElement("option");
-            optiony.setAttribute("name", "firstOption");
+            optiony.setAttribute("name", "secondtOption");
+            optionx.setAttribute("id", "secondtOption");
             var optionz = document.createElement("option");
-            optionz.setAttribute("name", "secondOption");
+            optionx.setAttribute("name", "thirdOption");
+            optionz.setAttribute("name", "thirdOption");
             optionx.innerHTML = "Select";
             optiony.innerHTML = "Rajasthan";
             optionz.innerHTML = "Hariyana";
@@ -84,7 +87,7 @@
 
             var label = document.createElement('label');
             label.setAttribute("for", "city");
-            label.innerHTML = "City : ";
+            label.innerHTML = "City :- ";
 
             var select1 = document.createElement("select");
             select1.setAttribute("id", "citi")
@@ -101,8 +104,8 @@
             // submit button
             var s = document.createElement("input");
             s.setAttribute("type", "submit");
-            s.setAttribute("value", "Submit");
-            s.setAttribute("onclick","set()")
+            s.setAttribute("value", "submit");
+            s.setAttribute("onclick","sett()")
              //Append Head
 
              form.appendChild(head);
@@ -178,22 +181,35 @@
 
         }
 
-        function set(){
-            var name = document.getElementById("name").value;
+        function sett(){
+            var fname = document.getElementById("name").value;
+            localStorage.setItem("uname",fname);
+
+
             var password = document.getElementById("password").value;
-            var mob = document.getElementById("mob").value;
-            var email = document.getElementById("email").value;
-            var state = document.getElementById("state")[0].value;
-            var city = document.getElementById("city")[0].value;
-
-
-            localStorage.setItem("uname",name);
             localStorage.setItem("upassword",password);
+
+
+            var mob = document.getElementById("mob").value;
             localStorage.setItem("umob",mob);
+
+
+            var email = document.getElementById("email").value;
             localStorage.setItem("uemail",email);
+
+            var add = document.getElementById("post").value;
+            localStorage.setItem("uadd",add);
+
+
+            var state = document.getElementById("statee").value;
             localStorage.setItem("ustate",state);
+
+
+            var city = document.getElementById("citi").value;
             localStorage.setItem("ucity",city);
 
+
+            return false;
 
         }
         

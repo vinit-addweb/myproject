@@ -5,13 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
 </head>
 <body>
-    <p >Your name:<span id="info"> </span></p>
+    <p >Your name:<span id="inr1"> </span></p>
+    <p >Your password: <span id="inr2"> </span></p>
+    <p >Your phone no. :<span id="inr3"> </span></p>
+    <p >Your eami-Id: <span id="inr4"> </span></p>
+    <p >Your Address: <span id="inr5"> </span></p>
+    <p >Your State: <span id="inr6"> </span></p>
+    <p >Your City: <span id="inr7"> </span></p>
 
-    <script>
-        document.getElementsById("info").innerHTML = localStorage.getItem("uname");
+    <script> 
+        document.getElementById("inr1").innerHTML = localStorage.getItem("uname");
+        document.getElementById("inr2").innerHTML = localStorage.getItem("upassword");
+        document.getElementById("inr3").innerHTML = localStorage.getItem("umob");
+        document.getElementById("inr4").innerHTML = localStorage.getItem("uemail");
+        document.getElementById("inr5").innerHTML = localStorage.getItem("uadd");
+        document.getElementById("inr6").innerHTML = localStorage.getItem("ustate");
+        document.getElementById("inr7").innerHTML = localStorage.getItem("ucity");
+        
         
     </script>
 </body>
