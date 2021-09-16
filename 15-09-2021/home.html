@@ -21,7 +21,7 @@
             border: solid;
             background-color: blue;
             margin: 30px;
-            transform: translate3d(100px, 100px, -600px);
+            transform: translate3d(100px, 100px, 0);
         }
     </style>
 </head>
@@ -35,8 +35,9 @@
         var thesmall = document.querySelector("#small");
         var thebig = document.querySelector("#big");
 
-        thebig.addEventListener("click", getclickpos, false);
-
+        thebig.addEventListener("click", getclickpos);
+        
+        //on click movment
         function getclickpos(e) {
             var xpos = e.clientX;
             var ypos = e.clientY;
@@ -46,6 +47,7 @@
 
         }
 
+        // click count
         var count = 0;
             function myFunction() {
             count = count + 1;
