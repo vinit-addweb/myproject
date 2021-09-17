@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #big {
+            height: 500px;
+            width: 500px;
+            overflow:scroll;
+            border: solid 2px black;
+            cursor: pointer;
+        }
+
+        #small {
+            height: 100px;
+            width: 100px;
+            border: solid;
+            background-color: blue;
+            margin: 30px;
+            transform: translate3d(100px, 100px, 0);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="big" onclick="myFunction()">
+        <div id="small" >
+        </div>
+    </div>
+    <script>
+        var thesmall = document.querySelector("#small");
+        var thebig = document.querySelector("#big");
+
+        thebig.addEventListener("click", getclickpos);
+        
+        //on click movment
+        function getclickpos(e) {
+            var xpos = e.clientX;
+            var ypos = e.clientY;
+
+            var translate3dvalue = "translate3d(" + xpos + "px," + ypos + "px, 0)";
+            thesmall.style.transform = translate3dvalue;
+
+        }
+
+        // click count
+        var count = 0;
+            function myFunction() {
+            count = count + 1;
+            setTimeout(function() { alert("Total click : "+count);},30000);
+        }
+
+
+    </script>
+
+</body>
+
+</html>

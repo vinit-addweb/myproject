@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My assignments</title>
+
+    <style>
+        .btn {
+            padding: 8px 10px;
+            margin: 8px;
+        }
+
+        .btn:hover {
+            cursor: pointer;
+            background-color: antiquewhite;
+            border-radius: 5%;
+            transform: translateX(13px);
+            transition-duration: 2.5s;
+        }
+    </style>
+</head>
+
+<body>
+    <h2> My Assignments </h2>
+
+    
+    <div><span>Click here to see Assignment 1 :</span><button id="btn1" type="button" class="btn">Assignment 1</button>
+    </div>
+    <div><span>Click here to see Assignment 2 :</span><button id="btn2" type="button" class="btn">Assignment 2</button>
+    </div>
+    <div><span>Click here to see Assignment 3 :</span><button id="btn3" type="button" class="btn">Assignment 3</button>
+    </div>
+    <p id = "data"></p>
+
+    <script>
+        //  for assigment 1
+        let btn1 = document.getElementById("btn1");
+
+
+        btn1.addEventListener('click', assigmnet1);
+
+        function assigmnet1() {
+            var xhr1 = new XMLHttpRequest();
+
+             xhr1.onload = function(){
+                if(this.readyState == 4 && this.status == 200)
+                 document.getElementById('data').innerHTML = this.responseText;
+             }
+
+            xhr1.open("GET", 'Assignment1.html', true);
+            xhr1.send();
+        }
+
+        //  for assigment 2
+
+        let btn2 = document.getElementById('btn2');
+        btn2.addEventListener('click',assigmnet2);
+
+        function assigmnet2(){
+          
+            var xhr2 = new XMLHttpRequest();
+
+            
+            xhr2.open('GET','Assignment2.html',true);
+            xhr2.onload = function(){
+                document.getElementById('data').innerHTML = this.responseText;
+            }
+            xhr2.send();
+
+        }
+
+        // for assigment 3
+
+        let btn3 = document.getElementById('btn3');
+        btn3.addEventListener('click',assigmnet3,false);
+        function assigmnet3(){
+            let xhr3 = new XMLHttpRequest();
+            xhr3.onload = function(){
+                document.getElementById('data').innerHTML = this.responseText;
+            }
+            
+            xhr3.open('GET',"Assignment3.html",true);
+            xhr3.send();
+        }
+
+    </script>
+</body>
+
+</html>
