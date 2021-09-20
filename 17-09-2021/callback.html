@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call back</title>
+</head>
+<body>
+    <h1>Call Back function</h1>
+    <p>Sum of two digit is </p>
+    <p>  <span id =numb></span> =  <span id="cal"> </span> </p>
+</body>
+
+<script>
+
+function some(sum){
+    document.getElementById("cal").innerHTML = sum;
+    
+}
+
+function calculte(num1, num2,some){
+    
+    let add = num1+num2;
+    some(add);
+   
+    document.getElementById("numb").innerHTML = num1 +" + " + num2 ;
+     
+}
+
+var num1 = Number (window.prompt ("Enter number",0));
+var num2 = Number (window.prompt("Enter another number",0));
+calculte(num1,num2,some);
+
+</script>
+</html>

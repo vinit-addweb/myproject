@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+<body>
+
+    <p id="g">
+        <p id="j"></p>
+
+    </p>
+    <script>
+
+    //  var btn = document.getElementById("btn1");
+      
+      //btn.addEventListener('click',"my");
+
+      function my(s){
+          document.getElementById("g").innerHTML= s
+      }
+
+
+
+       var pro = new Promise(function(resolve,reject){
+           var htx =new XMLHttpRequest();
+           htx.open("GET","Assignment1.html");
+           htx.onload = function(){
+               if (htx.status ==200){
+
+                   resolve(htx.response);
+               }else{
+                   reject("File is not exist")
+               }
+           };
+           htx.send();
+       });
+
+       pro.then(function(value){
+        document.getElementById("g").innerHTML = "success";
+       })
+       .catch (function(){
+        document.getElementById("g").innerHTML = "Error";
+       });
+    </script>
+</body>
+
+</html>
