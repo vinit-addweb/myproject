@@ -10,7 +10,7 @@
         #big {
             height: 500px;
             width: 500px;
-            overflow:scroll;
+            overflow: scroll;
             border: solid 2px black;
             cursor: pointer;
         }
@@ -27,16 +27,18 @@
 </head>
 
 <body>
-    <div id="big" onclick="myFunction()">
-        <div id="small" >
+    <div id="big" onclick="myFunction()" >
+        <p id="time1">time</p>
+        <div id="small">
         </div>
+
     </div>
     <script>
         var thesmall = document.querySelector("#small");
         var thebig = document.querySelector("#big");
 
         thebig.addEventListener("click", getclickpos);
-        
+
         //on click movment
         function getclickpos(e) {
             var xpos = e.clientX;
@@ -47,14 +49,32 @@
 
         }
 
-        // click count
-        var count = 0;
+        //Timer
+
+            var time =30;
+            var timeset = setInterval(coundown,1000);
+
+          function coundown(){
+                    if (time == -1){
+                        clearTimeout(timeset);
+                    }
+                    else{
+                    document.getElementById("time1").innerHTML = time +" seconds left";
+                    time--;}
+        
+                    }
+                    var count = 0;
             function myFunction() {
             count = count + 1;
-            setTimeout(function() { alert("Total click : "+count);},30000);
+            setTimeout(function() { 
+                alert("Total click : "+count)
+                ;},30000);
         }
 
-
+        function my(){
+            timeset;
+            myFunction();
+        }
     </script>
 
 </body>
