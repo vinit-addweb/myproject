@@ -29,3 +29,7 @@
 15-09-2021 - Javascript Task 
 
 16-09-2021 - AJAX Task
+
+17-09-2021 - practical Java script Asyn
+
+20-09-2021 - Task on Java script Asyn
