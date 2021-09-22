@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedulers</title>
+</head>
+
+<body>
+    <h2 id = "timer"></h2>
+    <script>
+
+        var time = 10;
+        var elem = document.getElementById('timer');
+        var timeset = setInterval(count, 1000);
+
+        function count() {
+            if (time == -1) {
+                clearTimeout(timeset);
+                doSomething();
+            } else {
+                elem.innerHTML = time + ' seconds Left......';
+                time--;
+            }
+        }
+
+        function doSomething() {
+            alert("Hello Ma'am..");
+        }
+    </script>
+</body>
+
+</html>
