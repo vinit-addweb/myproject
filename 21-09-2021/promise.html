@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="pro">
+        please wait for 3 seconds.....
+    </div>
+    <script>
+        const pro = new Promise(function (resolve, reject) {
+            var a = 6;
+            var b = 6;
+
+            setTimeout(
+                function () {
+                    if (a == b) {
+                        resolve("a is equal to b");
+                    } else {
+                        reject("a is not equal to b");
+                    }
+                },3000);
+            
+
+        });
+
+        pro.then(function(value){
+            document.getElementById("pro").innerHTML = value;
+        })
+        .catch(function(error){
+            document.getElementById("pro").innerHTML = error;
+        })
+
+
+    </script>
+</body>
+
+</html>

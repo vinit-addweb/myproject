@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="classs"></div>
+
+    <script>
+
+     class Car{
+         constructor(name,year){
+             this.name = name;
+             this.year = year;
+             this.about = function(){
+                 return `Car is ${name} and manufacturing year is ${year}`
+             } 
+         }
+     }
+    car1 = new Car("swift","2014");
+    document.getElementById("classs").innerHTML = car1.about();
+    </script>
+</body>
+</html>
