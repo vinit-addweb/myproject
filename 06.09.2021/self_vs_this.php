@@ -2,7 +2,7 @@
 
 class student
 {
-    // using self keyword
+     // using self keyword
  static $name;
  public static function display($nam)
  {
