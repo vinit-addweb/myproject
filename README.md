@@ -33,3 +33,9 @@
 17-09-2021 - practical Java script Asyn
 
 20-09-2021 - Task on Java script Asyn
+
+21-09-2021 - Task on javascript ES6
+
+23-09-2021 - Type-Script Task
+
+24-09-2021 - Type-Script Task 
