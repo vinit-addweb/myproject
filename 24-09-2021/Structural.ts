@@ -1,6 +1,9 @@
+
+// define the types of varibales
 interface IPerson { 
     firstName:string, 
     lastName:string, 
+    
     sayHi: ()=>number|string;
  } 
  

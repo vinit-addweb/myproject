@@ -8,6 +8,7 @@ interface b1{
     phone:number;
 }
 
+//intersection
 type employee = a1&b1;
 
 let g : employee = {

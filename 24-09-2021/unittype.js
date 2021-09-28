@@ -4,6 +4,6 @@ let d = "right"
 console.log(myfunction(d,10,"left"));
 */
 var hello = function (h, b, dirction) {
-    return "my name is " + h + " and id is " + b + " dirction is " + dirction;
+    return "my name is " + h + " and id is " + b + " and  dirction is " + dirction;
 };
 console.log(hello("vinit", 7, "right"));

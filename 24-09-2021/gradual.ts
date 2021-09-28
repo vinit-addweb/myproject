@@ -1,6 +1,8 @@
+// set any type varibale
+
 const a:any = [];
 a.push(2);
-a.push("hello");
+a.push(" hello ");
 
 
 
@@ -14,4 +16,4 @@ a.forEach(my);
 
 
 console.log(h);
-a.map(a[1])
+//console.log(a.map(a[1]));

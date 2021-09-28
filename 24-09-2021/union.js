@@ -1,3 +1,4 @@
+//union 
 function disp(n, b) {
     if (typeof n === "number" && typeof b === "number") {
         return n * b;

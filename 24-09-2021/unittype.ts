@@ -6,7 +6,7 @@ console.log(myfunction(d,10,"left"));
 
 
 let hello = (h:string ,b:number,dirction:"right"|"left"):string => {
- return `my name is ${h} and id is ${b} dirction is ${dirction}`
+ return `my name is ${h} and id is ${b} and  dirction is ${dirction}`
 }
 
 console.log(hello("vinit",7,"right"));

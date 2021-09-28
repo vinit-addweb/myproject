@@ -1,3 +1,5 @@
+// set the type of variable 
+
 type add =  string|number|boolean|undefined;
 
 

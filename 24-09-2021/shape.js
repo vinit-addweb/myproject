@@ -1,8 +1,9 @@
+//area of diffrent shapes
 function area(sh) {
     if (sh.shape === "circle") {
         return Math.PI * sh.radius * sh.radius;
     }
-    else if (sh.kind === "square") {
+    else if (sh.shape === "square") {
         return sh.x * sh.x;
     }
     else {

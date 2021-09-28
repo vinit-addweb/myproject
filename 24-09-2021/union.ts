@@ -1,3 +1,5 @@
+//union 
+
 function disp(n:string|number,b:number|string){
     if(typeof n ==="number" && typeof b==="number"){
         return n*b;

@@ -1,5 +1,6 @@
 "use strict";
 exports.__esModule = true;
+// export the file
 var Mobile = /** @class */ (function () {
     function Mobile() {
     }
@@ -10,4 +11,4 @@ var Mobile = /** @class */ (function () {
 }());
 exports["default"] = Mobile;
 //let b = new Mobile();
-//b.myfunction(); 
+//b.myfunction();   
